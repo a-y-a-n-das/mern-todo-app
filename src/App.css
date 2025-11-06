@@ -1,0 +1,149 @@
+/* Intentionally left blank for a clean start */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+  color: #222;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  max-width: 720px;
+  margin-top: 10px;
+  border-radius: 16px;
+  padding: 10px 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-group {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+  justify-content: flex-end; /* pushes group to the right */
+}
+
+.btn-group .todo-btn {
+  flex: 1 1 0; /* distribute evenly */
+  text-align: center;
+  max-width: 85px; /* limit width to keep compact */
+}
+
+.todo-btn {
+  border: none;
+  border-radius: 8px;
+  min-width: 80px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  color: white;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  transform: translateY(0);
+}
+
+.todo-btn.done {
+  background-color: #28a745;
+}
+
+.todo-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+  filter: brightness(0.95);
+}
+
+.todo-btn.done:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.todo-btn.undo {
+  background-color: #ffc107; /* amber/yellow */
+  color: #222;
+}
+.todo-btn.undo:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+.todo-btn.delete {
+  background-color: #dc3545; /* Bootstrap red tone */
+  color: white;
+}
+
+/* Hover: brighter red lift */
+.todo-btn.delete:hover {
+  background-color: #c82333;
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* Active (click down): deeper red push */
+.todo-btn.delete:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  filter: brightness(0.9);
+}
+
+.input-group {
+  display: flex;
+  align-items: center;  /* ✅ vertically center input + button */
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+  max-width: 500px;     /* ✅ match your todo width */
+  width: 100%;
+
+}
+
+.input-group input {
+  flex: 1;                     /* ✅ take available space, not fixed width */
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline-color: #007bff;
+  height: 42px;                /* ✅ consistent height with button */
+  box-sizing: border-box;
+}
+
+.input-group button {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s ease;
+  height: 42px;                /* ✅ exact height match */
+  box-sizing: border-box;
+}
+
+
+.input-group button:hover {
+  background: #0056b3;
+}
