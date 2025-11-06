@@ -15,9 +15,9 @@ app.use(bodyParser.json());
 
 app.use("/api/todos", todoRoutes);
 
-app.get("/", (req, res) => {
-  res.send("Server running...");
-});
+// app.get("/", (req, res) => {
+//   res.send("Server running...");
+// });
 
 mongoose
   .connect(process.env.MONGO_URI, {
