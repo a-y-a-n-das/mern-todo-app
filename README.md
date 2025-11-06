@@ -1,16 +1,30 @@
-# React + Vite
+# 📝 MERN Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **Full Stack MERN (MongoDB, Express, React, Node.js)** Todo Application built and deployed on **Railway**.
 
-Currently, two official plugins are available:
+This project allows users to add, view, complete, and delete todos — all with a connected backend API and MongoDB database.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+<img width="769" height="619" alt="image" src="https://github.com/user-attachments/assets/e7d0c08b-6946-4ecc-9f18-9220f10509af" />
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+🔗 **Frontend + Backend:**  
+[https://mern-todo-app-production-d6f5.up.railway.app](https://mern-todo-app-production-d6f5.up.railway.app)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ⚙️ Tech Stack
+
+| Layer | Technology |
+|--------|-------------|
+| **Frontend** | React + Vite |
+| **Backend** | Node.js + Express |
+| **Database** | MongoDB Atlas |
+| **Deployment** | Railway |
+| **Styling** | CSS |
+
+---
+
+
