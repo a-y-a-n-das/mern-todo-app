@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "prestart": "cd backend && npm install",
     "dev": "concurrently \"npm run backend\" \"vite\"",
     "start": "cd backend && npm start",
     "build": "vite build",
