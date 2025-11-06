@@ -1,13 +1,15 @@
 import "./App.css";
 import { useState } from "react";
 import { useEffect } from "react";
+import { BASE_URL } from "./config";
+
 
 function App() {
   const [todo, setTodo] = useState([]);
   const [text, setText] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/todos")
+    fetch(`${BASE_URL}/api/todos`)
       .then((res) => res.json())
       .then((data) => {
         setTodo(data);
@@ -25,7 +27,7 @@ function App() {
       alert("This todo already exists!");
       return;
     }
-    const res = await fetch("http://localhost:5000/api/todos", {
+    const res = await fetch(`${BASE_URL}/api/todos`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title: text }),
@@ -93,7 +95,7 @@ function App() {
 }
 
 async function completeTodo(id, setTodo) {
-  const res = await fetch("http://localhost:5000/api/todos/", {
+  const res = await fetch(`${BASE_URL}/api/todos`, {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ idToComplete: id }),
@@ -106,7 +108,7 @@ async function completeTodo(id, setTodo) {
 }
 
 async function deleteTodo(setTodo, id) {
-  await fetch("http://localhost:5000/api/todos/", {
+  await fetch(`${BASE_URL}/api/todos`, {
     method: "DELETE",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ idToDelete: id }),
