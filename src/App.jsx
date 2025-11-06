@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { BASE_URL } from "./config";
 
-
 function App() {
   const [todo, setTodo] = useState([]);
   const [text, setText] = useState("");
@@ -49,15 +48,16 @@ function App() {
           >
             {todo.map((t) => {
               return (
-                <li
-                  className="todo-item"
-                  key={t._id}
-                  style={{
-                    textDecoration: t.completed ? "line-through" : "none",
-                    color: t.completed ? "gray" : "black",
-                  }}
-                >
-                  {t.title}{" "}
+                <li className="todo-item" key={t._id}>
+                  <span
+                    style={{
+                      textDecoration: t.completed ? "line-through" : "none",
+                      color: t.completed ? "gray" : "black",
+                      marginRight: "10px",
+                    }}
+                  >
+                    {t.title}{" "}
+                  </span>
                   <div className="btn-group">
                     <button
                       className={`todo-btn ${t.completed ? "undo" : "done"}`}
@@ -79,7 +79,7 @@ function App() {
           </ul>
         </div>
         <div className="input-group">
-          <input 
+          <input
             type="text"
             value={text}
             onChange={(e) => setText(e.target.value)}
