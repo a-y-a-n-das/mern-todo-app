@@ -5,6 +5,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import todoRoutes from "./routes/todoRoutes.js";
+import path from "path";
+import { fileURLToPath } from "url";
 
 dotenv.config();
 
@@ -18,6 +20,17 @@ app.use("/api/todos", todoRoutes);
 // app.get("/", (req, res) => {
 //   res.send("Server running...");
 // });
+
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// ✅ Serve static React build files (assuming built folder is in backend/dist)
+app.use(express.static(path.join(__dirname, "dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
+});
 
 mongoose
   .connect(process.env.MONGO_URI, {
