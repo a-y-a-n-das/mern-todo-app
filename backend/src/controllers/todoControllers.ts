@@ -74,7 +74,7 @@ export async function completeTodo(req: Request, res: Response): Promise<void> {
       );
 
   console.log(result);
-  res.json({ message: "Todo updated successfully", result });
+  res.json({ result });
 } catch(err){ 
     res.status(500).json({message: "Internal Server Error"});
   }
