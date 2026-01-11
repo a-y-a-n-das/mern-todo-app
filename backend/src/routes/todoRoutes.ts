@@ -4,7 +4,7 @@ import {
   addTodo,
   deleteTodo,
   completeTodo,
-} from "../controllers/todoControllers.js";
+} from "../controllers/todoControllers.ts";
 
 const router = express.Router();
 

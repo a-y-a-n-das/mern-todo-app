@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
-import todoRoutes from "./routes/todoRoutes.js";
+import todoRoutes from "./src/routes/todoRoutes.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -17,9 +17,6 @@ app.use(bodyParser.json());
 
 app.use("/api/todos", todoRoutes);
 
-// app.get("/", (req, res) => {
-//   res.send("Server running...");
-// });
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -31,10 +28,7 @@ app.get("*", (req, res) => {
 });
 
 mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.error("❌ MongoDB connection error:", err));
 
