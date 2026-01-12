@@ -33,8 +33,7 @@
 
     // Recommended Options
     //"strict": true,
-    "noEmit": true,
-    "allowImportingTsExtensions": true,
+    "allowImportingTsExtensions": false,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
