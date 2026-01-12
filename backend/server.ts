@@ -5,8 +5,6 @@ import cors from "cors";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import todoRoutes from "./src/routes/todoRoutes.js";
-import path from "path";
-import { fileURLToPath } from "url";
 
 dotenv.config();
 
@@ -18,14 +16,6 @@ app.use(bodyParser.json());
 app.use("/api/todos", todoRoutes);
 
 
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-app.use(express.static(path.join(__dirname, "../dist")));
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../dist", "index.html"));
-});
 
 mongoose
   .connect(process.env.MONGO_URI)
