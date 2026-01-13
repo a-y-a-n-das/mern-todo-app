@@ -11,7 +11,7 @@ This project allows users to add, view, complete, and delete todos — all with 
 ## 🚀 Live Demo
 
 🔗 **Frontend + Backend:**  
-[https://mern-todo-app-production-d6f5.up.railway.app](https://mern-todo-app-production-d6f5.up.railway.app)
+https://mern-todo-app-five-alpha.vercel.app/
 
 ---
 
